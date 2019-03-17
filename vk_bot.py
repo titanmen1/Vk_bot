@@ -17,7 +17,7 @@ def pars():
     #pars = parsed_body.xpath('//p/text()')
     #print(len(pars))
 
-    f = open('text.txt', 'r')
+    f = open('text.txt', 'r', encoding='utf-8')
     pars = f.read().split(' | ')
     f.close()
     return pars

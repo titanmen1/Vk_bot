@@ -45,14 +45,14 @@ def messages_user():
                 if event.from_user:  # Если написали в ЛС
 
                     # Отправка фотографии
-                    file = 'image/' + str(random.randint(1, 19)) + '.jpg'
+                    file = 'image/' + str(random.randint(1, 30)) + '.jpg'
                     photo1 = upload.photo_messages(file)
 
-                    print(event.text)
-                    print(event.user_id)
+#                    print(event.text)
+ #                   print(event.user_id)
                     vk.messages.send(  # Отправляем сообщение
                         user_id=event.user_id,
-                        message=pars()[random.randint(1, 117)],
+                        message=pars()[random.randint(1, 146)],
                         random_id=random.randint(1, 10000000),
                         attachment='photo{}_{}'.format(photo1[0]['owner_id'], photo1[0]['id'])
                     )
